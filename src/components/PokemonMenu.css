@@ -1,0 +1,24 @@
+.PokemonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Pokemon {
+  background-color: #b8ffb8;
+  border-radius: 100px;
+  height: 100px;
+  transition: all 1s ease-out;
+  width: 100px;
+}
+
+.Pokemon:hover {
+    background-color: #81dd81;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.PokemonImage {
+  height: 100px;
+  margin-bottom: 8px;
+  width: 100px;
+}
