@@ -41,3 +41,12 @@ All of this should be done in approx 3 to 5 hours, depending on how many details
 ## MVP
 
 Here will be all the information related to the actual implementation, like if anything is missing or caveats.
+
+## Finishing Thoughts
+So I wasn't able to add any attack specific data, or the enemy attacking, it is actually quite a simple game (can't even be called a game yet because you always win) but I think it's a good base for something more complex, it's just missing the enemies attack and actual health data.
+
+So, missing things, or things that could be added to improve it:
+- Add health based on API
+- Add attacks
+- Add sound effects
+- Make enemy attack

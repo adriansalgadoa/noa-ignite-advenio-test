@@ -16,9 +16,8 @@ const fetchPokemons = async (setPokemonList, fetchedRef) => {
     }));
 };
 
-const PokemonMenu = () => {
+const PokemonMenu = ({ choosePokemon }) => {
     const [pokemonList, setPokemonList] = useState([]);
-    const [chosenPokemon, setChosenPokemon] = useState({});
     const fetchingRef = useRef(false);
     const fetchedRef = useRef(false);
   
@@ -28,11 +27,18 @@ const PokemonMenu = () => {
         fetchPokemons(setPokemonList, fetchedRef);
     }, []);
 
+    const choose = (pokemon) => {
+        const randomIndex = Math.floor(Math.random() * pokemonList.length);
+        console.log('randomIndex: ', randomIndex);
+        console.log('enemy: ', pokemonList[randomIndex]);
+        choosePokemon(pokemon, pokemonList[randomIndex]);
+    }
+
     if (fetchedRef.current) {
         return (
             <div className='PokemonContainer'>
                 {pokemonList.map((pokemon) => (
-                    <div className='Pokemon' key={pokemon.name} onClick={() => setChosenPokemon(pokemon)}>
+                    <div className='Pokemon' key={pokemon.name} onClick={() => choose(pokemon)}>
                         <img className='PokemonImage' src={pokemon.sprites.front_default} alt={pokemon.name} />
                         <div>{pokemon.name}</div>
                     </div>

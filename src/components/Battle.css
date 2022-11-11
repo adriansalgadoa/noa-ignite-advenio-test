@@ -1,0 +1,62 @@
+.PlayerContainer {
+    height: 160px;
+    position: relative;
+}
+
+.PokemonAvatar {
+    position: absolute;
+    width: 200px;
+    transition: all 1s ease-in;
+}
+
+.PokemonAvatar.__enemyStart {
+    right: -100px;
+    transition: all 1s ease-in;
+}
+
+.PokemonAvatar.__enemyDefault {
+    right: 0;
+}
+
+.PokemonAvatar.__playerStart {
+    left: -100px;
+    transition: all 1s ease-in;
+}
+
+.PokemonAvatar.__playerDefault {
+    left: 0;
+}
+
+.PokemonAvatar.__playerAttack {
+    animation: 1s attack ease-in-out;
+    left: 0;
+    transition: all 0.3s ease-in;
+}
+
+.EnemyHealth {
+    background-color: green;
+    height: 18px;
+    width: 100px;
+}
+
+.EnemyHealth.__critical {
+    background-color: red;
+}
+
+.AttackButton {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+@keyframes attack{
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(300px, -91px)
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
